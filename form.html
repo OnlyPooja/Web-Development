@@ -1,0 +1,71 @@
+<html>
+    <style>
+    .form{
+       
+        padding: 20px; 
+        max-width: 400px; 
+        margin: 0 auto;
+    }
+    .main{
+        margin: 8px;
+        padding:10px;
+    }
+    h3{
+        margin:0 auto;
+        width: 20%;
+        padding: 20px;
+    }
+    .form2{
+        padding: 20px; 
+        max-width: 400px; 
+        margin: 0 auto;
+    }
+    .submit{
+        padding: 10px; 
+        max-width: 400px; 
+        margin: 0 auto;
+    }
+    </style>
+    <body>
+       <h3>Fill the below information properly</h3>
+        <form class="form">
+            <fieldset>
+        <legend> Personal Information </legend>
+            <div class="main">
+                <div>Name: <input type="text" name="name" placeholder="Your name"></div> <br>
+                <div>Course: <input type="text" name="course" placeholder="Your course"></div> <br>
+                <div>Email: <input type="email" name="myemail" placeholder="Your email"></div> <br>
+                <div>DOB: <input type="date" name="DOB"></div> <br>
+                <div>Are You Eligible:<input type="checkbox" ></div><br> <!--by writing checked after checkbox it will be always default checked-->
+                <div> Gender:male<input type="radio" name="mygender"> 
+                  female <input type="radio" name="mygender">
+                  other <input type="radio" name="mygender"></div><br>
+                  <div>Phone Number:<input type="number"></div>
+        </div>
+    </fieldset>
+        </form><br>
+        <form class="form2">
+            <fieldset>
+                <legend>Basic Information</legend>
+            <div class="main">
+                <div>
+                    Interests:Books<input type="checkbox" > Movies<input type="checkbox" >VideoGames<input type="checkbox" >
+                </div><br>
+                <div>
+                    <label for="favorite-color">Favorite Color:</label>  
+              <select id="favorite-color" name="favorite-color">
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+            <option value="yellow">Yellow</option>
+            <option value="orange">Orange</option>
+            <option value="orange">Other</option>
+        </select>
+                </div>
+            </div>
+        </fieldset>
+        </form>
+        <div class="submit"><input type="submit" value="submit now"> </div>
+      <div class="submit"> <input type="reset" value="reset"></div><br>
+    </body>
+</html>

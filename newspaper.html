@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Newspaper Layout</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .column {
+        width: calc(33.33% - 20px);
+        margin-bottom: 40px;
+    }
+
+    h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="column">
+        <h2>Column 1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel eros nec sapien commodo rutrum.</p>
+        <p>Nullam vel ipsum eu nulla vehicula tincidunt. Nullam vestibulum finibus leo, in suscipit quam hendrerit vel.</p>
+    </div>
+    <div class="column">
+        <h2>Column 2</h2>
+        <p>Quisque euismod, magna a vestibulum convallis, elit felis posuere arcu, ut congue est sapien ac odio.</p>
+        <p>Sed quis ultrices purus, vel suscipit lectus. Morbi eget justo nec orci laoreet pharetra vel id justo.</p>
+    </div>
+    <div class="column">
+        <h2>Column 3</h2>
+        <p>Nunc sit amet mi eget dolor malesuada commodo. Duis vitae fringilla libero. Fusce et elit lorem.</p>
+        <p>Aliquam erat volutpat. Integer venenatis libero at enim tempus, sed interdum lacus vestibulum.</p>
+    </div>
+</div>
+
+</body>
+</html>
