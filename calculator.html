@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+</head>
+<body>
+    <script>
+        function fun() {
+            let a = parseFloat(document.getElementById("1").value);
+            let b = parseFloat(document.getElementById("2").value);
+            document.getElementById("result").innerText = "Result: " + (a + b);
+        }
+    </script>
+    <h4>Enter two numbers</h4>
+    Number1: <input type="number" id="1">
+    Number2: <input type="number" id="2">
+    <button onclick="fun()">Add</button>
+    <div id="result"></div>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .first {
+            margin-top: 40px;
+            margin-left: 30%;
+            margin-right: 30%;
+            background-color:#F5FBFF;
+        }
+        .second {
+            padding: 10px; 
+        }
+        .third {
+            padding: 10px; 
+        }
+        h3 {
+            margin-top: 3%;
+            margin-left: 35%;
+        }
+        label {
+            margin-bottom: 5px; 
+        }
+    </style>
+</head>
+<script>
+    function valid() {
+        let fullname = document.getElementById("1").value;
+        let dob = document.getElementById("2").value;
+        let gender = document.querySelector('input[name="Gender"]:checked');
+        let address = document.getElementById("3").value;
+        let phone = document.getElementById("4").value;
+        let email= document.getElementById("5").value;
+        let password= document.getElementById("6").value;
+        let confirm = document.getElementById("7").value;
+
+        if (fullname === "" || dob === "" || gender === null || address === "" || phone === "") {
+            alert("All fields are mandatory");
+            return false;
+        }
+        else if(phone.length!=10){
+        alert("Number not valid");
+        return 0;
+        }
+        else if(!/^[A-Za-z\s]+$/.test(fullname))
+        {
+            alert("NAME not valid");
+            return 0;
+        }
+        else if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))
+        {
+            alert("Email not valid");
+            return 0;
+        }
+        else if(password!=confirm)
+        {
+            alert("Password dont matches");
+            return 0;
+        }
+        else if(password.length<8)
+        {
+             alert("password lenth should be 8 minimum");
+             return 0;
+        }
+    }
+</script>
+<body>
+    <h3>Fill the below information properly</h3>
+    <div class="first">
+        <form>
+            <fieldset>
+                <div class="second">
+                    <fieldset>
+                        <legend>Personal Information</legend><br>
+                        Full name:
+                        <input type="text" name="fname" placeholder="Your name" id="1"><br><br>
+                        Birth Date
+                        <input type="date" name="DOB" id="2"><br><br>
+                        Gender:
+                        <input type="radio" name="Gender" value="Male">Male
+                        <input type="radio" name="Gender" value="Female">Female<br><br>
+                        Address:
+                        <textarea name="add" cols="15" rows="1" id="3"></textarea><br><br>
+                        Phone Number:
+                        <input type="number" name="num" id="4"><br><br>
+                        Email:
+                        <input type="email" id="5"><br><br>
+                        Password:
+                        <input type="password" id="6"><br><br>
+                        Confirm Password:
+                        <input type="password" id="7"><br><br>
+                    </fieldset>
+                </div>
+                
+                <div class="third">
+                    <fieldset>
+                        <legend>Extra Information</legend><br>
+                        Interests:
+                        <input type="checkbox" name="Interests" value="Books">Books
+                        <input type="checkbox" name="Interests" value="Movies">Movies
+                        <input type="checkbox" name="Interests" value="VideoGames">VideoGames<br><br>
+                        Favorite color:
+                        <input type="color" name="favcolor" value="#ff0000"><br><br>
+                    </fieldset>
+                </div>
+                <br>
+                <input style="margin-left: 17px; margin-right: 5px;" type="reset">
+                <button id="submitBtn" onclick="return valid()">Submit</button>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

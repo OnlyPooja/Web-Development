@@ -5,56 +5,84 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Newspaper Layout</title>
 <style>
-    body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        margin: 0;
-        padding: 0;
-    }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 10px;
+  }
 
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 20px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 
+  .column {
+    float: left;
+    width: 33%; 
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  @media screen and (max-width: 600px) {
     .column {
-        width: calc(33.33% - 20px);
-        margin-bottom: 40px;
+      width: 100%; 
     }
+  }
+  
+  .article {
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .line {
+        border-top: 3px solid black;
+    }
+    .vertical-line {
+    border-left: 1px solid black;
+    height: 100px; 
+}
 
-    h2 {
-        font-size: 24px;
-        margin-bottom: 10px;
-    }
-
-    p {
-        font-size: 16px;
-        margin-bottom: 20px;
-    }
 </style>
 </head>
 <body>
-
+<center> <h1>NEWSPAPER TITLE</h1></center>
+<p class="line"></p>
+<center><h3> FRIDAY 8th MARCH 2024</h3></center>
+<p class="line"></p>
 <div class="container">
-    <div class="column">
-        <h2>Column 1</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel eros nec sapien commodo rutrum.</p>
-        <p>Nullam vel ipsum eu nulla vehicula tincidunt. Nullam vestibulum finibus leo, in suscipit quam hendrerit vel.</p>
+  <div class="column">
+    <div class="article">
+      <h2>SCHOOLS WILL REMAIN CLOSED ON MONDAY</h2>
+      <p>Schools will remain closed from Monday to Saturday, with classes only taking place on Sundays.</p>
     </div>
-    <div class="column">
-        <h2>Column 2</h2>
-        <p>Quisque euismod, magna a vestibulum convallis, elit felis posuere arcu, ut congue est sapien ac odio.</p>
-        <p>Sed quis ultrices purus, vel suscipit lectus. Morbi eget justo nec orci laoreet pharetra vel id justo.</p>
+    <div class="vertical-line"></div>
+    <div class="article">
+      <h3>75% ATTENDENCE IS NOT REQUIRED</h3>
+      <p>At universities, attendance is not compulsory. Students are not required to maintain a 75% attendance records</p>
     </div>
-    <div class="column">
-        <h2>Column 3</h2>
-        <p>Nunc sit amet mi eget dolor malesuada commodo. Duis vitae fringilla libero. Fusce et elit lorem.</p>
-        <p>Aliquam erat volutpat. Integer venenatis libero at enim tempus, sed interdum lacus vestibulum.</p>
+  </div>
+  <div class="column">
+    <div class="article">
+      <h3>HOSTEL LEAVE SUGGESTIONS FROM STUDENTS</h3>
+      <p>Leave should be allocated to hostel students with the commencement of parents only, no coordinatpr role for leave .</p>
     </div>
+    <div class="article">
+      <h3>LEVEL OF INTERVIEW</h3>
+      <p>There should be level of interview at every step,that is basic and first round medium at second and hard at third level.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="article">
+      <h2>Article 1</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non diam nec ex vulputate feugiat.</p>
+    </div>
+    <div class="article">
+      <h2>Article 2</h2>
+      <p>Integer placerat sem non sapien ullamcorper tincidunt. Aliquam fringilla felis a nunc condimentum aliquet.</p>
+    </div>
+  </div>
 </div>
 
 </body>

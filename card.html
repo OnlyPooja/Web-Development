@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Card</title>
+</head>
+<script>
+function fun() {
+    let cardtype = document.getElementById("0").value;
+    let cardnumber = document.getElementById("2").value;
+
+    if (cardtype === 'Visa') {
+        if (cardnumber.length !== 13) {
+            alert("Invalid Card");
+        } else {
+            if (cardnumber.charAt(0) === '5' && (parseInt(cardnumber.charAt(1)) >= 1 && parseInt(cardnumber.charAt(1)) <= 5)) {
+                alert("Valid Card");
+            } else {
+                alert("Invalid Card");
+            }
+        }
+    }
+    else if (cardtype === 'Master Card') {
+        if (cardnumber.length !== 13 && cardnumber.length !== 16) {
+            alert("Invalid Card");
+        } else {
+            if (cardnumber.substring(0, 2) === '34' || cardnumber.substring(0, 2) === '37') {
+                alert("Valid Card");
+            } else {
+                alert("Invalid Card");
+            }
+        }
+    }
+    else if (cardtype === 'Debit card') {
+        if (cardnumber.length !== 15) {
+            alert("Invalid Card");
+        } else {
+            if (cardnumber.substring(0, 2) === '35') {
+                alert("Valid Card");
+            } else {
+                alert("Invalid Card");
+            }
+        }
+    }
+}
+</script>
+<style>
+    .main{
+            width: 20%;
+            margin-top: 40px;
+            margin-left: 30%;
+            margin-right: 30%;
+            background-color:#90c3e4; 
+    }
+    .main2{
+        
+        padding: 20px;
+    }
+</style>
+<body>
+    <div class="main">
+        <div class="main2">
+    <h4>Select a card</h4>
+    <select id="0">
+        <option value="" disabled selected hidden></option>
+        <option>Visa</option>
+        <option>Master Card</option>
+        <option>Debit card</option>
+    </select><br><br>
+    <h4>Enter Your card number</h4>
+    <input type="text" id="2">
+    <button id="1" onclick="fun()">CHECK</button>
+</div>
+</div>
+</body>
+</html>
